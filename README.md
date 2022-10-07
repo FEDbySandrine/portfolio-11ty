@@ -13,9 +13,9 @@
 
 (delete package-lock.json if you run into issues running the project for the first time)
 
-## Convert images to webp format for performance
+## Convert images to webp format
 1. `cd src/assets/images`
-2. `npm webpc -r`
+2. `npm run webp`
 
 ## Styles
 SCSS file architecture based on Inverted Triangle CSS.
