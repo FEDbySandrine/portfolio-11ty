@@ -2,6 +2,19 @@
    # LAYOUTS
    ========================================================================== */
 
+ .wrapper {
+   @include align-center;
+   container-type: inline-size;
+   max-width: $max-width;
+   padding-left: var(--edges);
+   padding-right: var(--edges);
+   width: 100%;
+ }
+
+ .content {
+   max-width: 95ch;
+ }
+
 .l  {
   &-section {
     margin-bottom: clamp(4rem, 2.8571rem + 5.7143vw, 8rem);
@@ -54,18 +67,6 @@
 .full-h {
   min-height: 100vh;
   min-height: 100dvh;
-}
-
-.container {
-  @include align-center;
-  max-width: $max-width;
-  padding-left: var(--edges);
-  padding-right: var(--edges);
-  width: 100%;
-}
-
-.content {
-  max-width: 95ch;
 }
 
 .hero {

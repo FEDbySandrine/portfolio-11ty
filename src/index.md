@@ -6,12 +6,12 @@ preview:  "social-homepage@2x"
 
 <section class="l-section l-concealer">
   <div class="l-concealer__cover v-align">
-    <div class="container">
+    <div class="wrapper">
       {%- include './_includes/modules/content-intro.njk' -%}
     </div>
   </div>
   <div class="l-concealer__spill l-banner theme theme:secondary">
-    <div class="container">
+    <div class="wrapper">
       {%- set opentowork = true -%}
       {%- include './_includes/modules/id-card.njk' -%}
     </div>
@@ -19,7 +19,7 @@ preview:  "social-homepage@2x"
 </section>
 
 <section class="l-section">
-  <div class="container">
+  <div class="wrapper">
     <h2 class="overline">Services</h2>
     <dl style="column-count: 3;">
       <dt>Consultancy</dt>
@@ -33,7 +33,7 @@ preview:  "social-homepage@2x"
 </section>
 
 <section class="l-section">
-  <div class="container">
+  <div class="wrapper">
     <h2 class="overline">Skills</h2>
     <ul style="column-count: 3;">
       <li>HTML markup proficiency</li>
@@ -62,7 +62,7 @@ preview:  "social-homepage@2x"
   </section>
 
   <section class="l-section l-concealer__cover">
-    <div class="container">
+    <div class="wrapper">
       <h2 class="overline">Tools</h2>
       <p>A non-exhaustive list of tools and systems I recently worked with:</p>
       <ul style="display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; grid-auto-flow: dense;">

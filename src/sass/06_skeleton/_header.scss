@@ -3,48 +3,4 @@
   padding-bottom: var(--sp-md);
   padding-top: var(--header-padding);
   z-index: var(--z-sticky);
-  // background-color: var(--bg-header);
-  // color: var(--co-header);
-  // padding-bottom: var(--space-header);
-  // padding-top: var(--space-header);
-  // transition-property: background-color, color;
-  // transition-duration: 0.25s;
-  // z-index: 10;
-  //
-  // &-home {
-  //   position: fixed;
-  // }
-  //
-  // &-observer--over {
-  //   margin-top: calc(var(--height-header) * -0.5);
-  //   margin-bottom: calc(var(--height-header) * 0.5);
-  // }
-  //
-  // &__wrapper {
-  //   display: grid;
-  //   align-items: var(--align-header);
-  //
-  //   > * {
-  //     grid-column-start: 1;
-  //     grid-row-start: 1;
-  //   }
-  // }
-  //
-  // &__logo {
-  //   justify-self: var(--logo-pos);
-  // }
-  //
-  // &__nav {
-  //   justify-self: flex-end;
-  // }
-  //
-  // &__menu {
-  //   background-color: var(--bg-header);
-  //   left: 0;
-  //   position: absolute;
-  //   right: 0;
-  //   top: 100%;
-  //   transition-property: background-color, color;
-  //   transition-duration: 0.25s;
-  // }
 }
