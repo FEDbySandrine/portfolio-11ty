@@ -20,10 +20,11 @@ $base-size: 16px;
 $min-width: 320px;
 $max-width: 1200px;
 
-
 $base-font-size: 100 !default; // In %. Also used for mobile. Number only, no units.
-$type-base: 16px;
-$type-scale: 1.125;
+$type-base-min: 16px;
+$type-base-max: 18px;
+$type-scale-min: 1.125;
+$type-scale-max: 1.215;
 $type-steps: "sm", "base", "md", "lg", "xl", "xxl", "xxxl";
 $type-base-index: list.index($type-steps, "base");
 $line-height: 1.5 !default;

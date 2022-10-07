@@ -16,8 +16,9 @@
   }
   @for $i from 1 through length($type-steps) {
     $step: list.nth($type-steps, $i);
-    $min: $type-base * math.pow($type-scale, $i - $type-base-index);
-    $max: $type-base * math.pow($type-scale, $i - $type-base-index + 1);
+    $power: $i - $type-base-index;
+    $min: $type-base-min * math.pow($type-scale-min, $power);
+    $max: $type-base-max * math.pow($type-scale-max, $power);
     --font-size-#{$step}: #{clamped($min, $max)};
   }
 
