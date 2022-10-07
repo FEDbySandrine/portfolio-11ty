@@ -1,0 +1,77 @@
+/* ==========================================================================
+   # LAYOUTS
+   ========================================================================== */
+
+.l  {
+  &-section {
+    margin-bottom: clamp(4rem, 2.8571rem + 5.7143vw, 8rem);
+  }
+
+  &-banner {
+    :first-child {
+      margin-top: 0;
+    }
+
+    :last-child {
+      margin-bottom: 0;
+    }
+
+    padding-bottom: var(--sp-xl);
+    padding-top: var(--sp-xl);
+  }
+
+  &-concealer {
+    &__cover {
+      @extend .min-height\:full;
+      background: var(--th-background-color);
+      position: relative;
+      z-index: var(--z-over);
+
+      &::after {
+        content: '';
+        display: table;
+      }
+    }
+    &__spill {
+      margin-bottom: 0.1px; // hack 1px bug;
+      position: sticky;
+      top: var(--header-height);
+    }
+
+    &__cover + &__spill {
+      bottom: 0;
+      top: auto;
+    }
+
+    &__spill + &__cover {
+      margin-top: 0;
+      min-height: 0;
+      padding-top: clamp(4rem, 2.8571rem + 5.7143vw, 8rem);
+    }
+  }
+}
+
+.full-h {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.container {
+  @include align-center;
+  max-width: $max-width;
+  padding-left: var(--edges);
+  padding-right: var(--edges);
+  width: 100%;
+}
+
+.content {
+  max-width: 95ch;
+}
+
+.hero {
+  @extend .full-h;
+  // @extend .bg-default;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}

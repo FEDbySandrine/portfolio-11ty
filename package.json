@@ -1,0 +1,32 @@
+{
+  "name": "FEDbySandrine",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "./",
+  "main": ".eleventy.js",
+  "scripts": {
+    "webp": "simple-webp-converter",
+    "watch:sass": "sass --error-css --no-source-map --style=compressed --watch src/sass:public/css",
+    "build:sass": "sass --error-css --no-source-map --style=compressed src/sass:public/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*",
+    "deploy": "npm run build && gh-pages -d public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "gh-pages": "^4.0.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.53.0",
+    "terser": "^5.15.0",
+    "webp-converter-cli": "^0.0.5"
+  },
+  "devDependencies": {
+    "eleventy-plugin-svg-sprite": "^1.2.2",
+    "simple-webp-converter": "^1.0.3"
+  }
+}

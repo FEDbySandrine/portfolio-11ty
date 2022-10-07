@@ -1,0 +1,57 @@
+/* ==========================================================================
+   # FUNCTIONS
+   ========================================================================== */
+@use 'sass:math';
+
+// Transform pixel value into relative unit to the default font size
+@function rem($value-px) {
+  @return math.div($value-px, 16px) * 1rem;
+}
+
+// Values for media-queries mixin
+@function media-query($c) {
+  $queries-map: (
+    'screen': 'screen',
+    'print': 'print',
+    'landscape': '(orientation: landscape)'
+  );
+
+  @each $name, $bkp in $bkps {
+    $map-bkp: (
+      '>#{$name}': '(min-width: #{$bkp})',
+      '<#{$name}': '(max-width: #{$bkp - rem(1px)})',
+    );
+    $queries-map: map-merge($queries-map, $map-bkp);
+  }
+
+  @return map-get($queries-map, $c);
+}
+
+// Access values within nested maps
+// @author Kitty Giraudel [https://css-tricks.com/snippets/sass/deep-getset-maps]
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return $map;
+}
+
+// Get header height for adjusting 100vh-like view when header is sticky
+@function getHeaderHeight() {
+  $header-height: 0;
+  @if ($sticky-header) {
+    $header-height: calc(var(--header-ft-size, 0) + (var(--header-padding, 0) * 2));
+  }
+  @return $header-height;
+}
+
+// Fluid type scale
+// @author Aleksandr Hovhannisyan [https://www.aleksandrhovhannisyan.com/blog/fluid-type-scale-with-css-clamp/]
+@function clamped($min-px, $max-px, $min-bp: $min-width, $max-bp: $max-width) {
+  $slope: math.div($max-px - $min-px, $max-bp - $min-bp);
+  $slope-vw: $slope * 100;
+  $intercept-rems: rem($min-px - $slope * $min-bp);
+  $min-rems: rem($min-px);
+  $max-rems: rem($max-px);
+  @return clamp(#{$min-rems}, #{$slope-vw}vw + #{$intercept-rems}, #{$max-rems});
+}

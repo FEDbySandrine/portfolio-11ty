@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="{{ settings.lang }}" dir="{{ settings.dir }}" class="no-js">
+  <head>
+    {% include "site/head.njk" %}
+  </head>
+  <body class="l-concealer">
+    <a href="#main" class="btn-skip">Skip to content</a>
+    <div aria-hidden="true">{% svgsprite %}</div>
+
+    {% include "site/header.njk" %}
+
+    {% block general %}
+      {% block main %}
+      <main id="main" class="l-concealer__cover">
+        {{ content | safe }}
+      </main>
+      {% endblock %}
+
+      {% block aside %}
+      {% endblock %}
+    {% endblock %}
+
+    {% include "site/footer.njk" %}
+
+    <script src="{{ '/js/scripts.js' | url }}"></script>
+  </body>
+</html>

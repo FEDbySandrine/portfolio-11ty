@@ -1,0 +1,108 @@
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+fieldset {
+  border: 0;
+	margin: 0;
+  padding: 0;
+}
+
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="file"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+select,
+textarea {
+  appearance: none;
+  border: 1px solid var(--co-borders);
+  color: var(--co-body);
+  padding: 8px 10px;
+  font-size: rem(12px);
+
+  &::placeholder {
+    color: var(--co-body);
+  }
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  border: 1px solid var(--co-borders);
+  width: 25px;
+  height: 25px;
+  margin: 0;
+
+  &:checked {
+    background-color: var(--co-accent);
+    box-shadow: inset 0 0 0 6px #fff;
+  }
+}
+
+label {
+  font-size: rem(12px);
+}
+
+select {
+  padding-bottom: 7px;
+  padding-top: 7px;
+  width: 100%;
+
+  &:after {
+    display: block;
+    content: "yo";
+  }
+}
+
+.form-select {
+  position: relative;
+
+  select {
+    background: transparent;
+    position: relative;
+    z-index: 1;
+  }
+
+  &::after {
+    background: url('#{$path_imgs}/dropdown.svg') no-repeat center 2px;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 15px;
+    padding: 0 15px;
+  }
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  line-height: 1.1;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+
+input[type="submit"] {
+  @include clear-btn;
+  color: inherit;
+  cursor: pointer;
+  font-size: rem(20px);
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}

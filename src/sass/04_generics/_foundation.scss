@@ -1,0 +1,141 @@
+/* ==========================================================================
+   # FOUNDATION
+   ========================================================================== */
+@use 'sass:math';
+@use 'sass:list';
+
+:root {
+  @each $index, $value in $zIndexes {
+    --z-#{$index}: #{$value};
+  }
+  @each $index, $value in $spacing {
+    --sp-#{$index}: #{$value};
+  }
+  @each $index, $value in $maxWidthChars {
+    --max-w-ch-#{$index}: #{$value};
+  }
+  @for $i from 1 through length($type-steps) {
+    $step: list.nth($type-steps, $i);
+    $min: $type-base * math.pow($type-scale, $i - $type-base-index);
+    $max: $type-base * math.pow($type-scale, $i - $type-base-index + 1);
+    --font-size-#{$step}: #{clamped($min, $max)};
+  }
+
+  // spacing
+  --edges: clamp(1rem, -0.1429rem + 5.7143vw, 5rem);
+  --header-padding: var(--sp-md);
+  --header-ft-size: 1rem;
+  --header-height: #{getHeaderHeight()};
+}
+
+* {
+  box-sizing: border-box;
+  margin-top: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  // scroll-snap-type: y proximity;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html,
+body,
+blockquote,
+iframe,
+figure,
+object {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-height: 100vh;
+}
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@if ($sticky-header) {
+  header {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 1px solid var(--th-color-link);
+  outline-offset: 2px;
+}
+
+p {
+  color: inherit;
+}
+
+ul {
+  padding-left: 2rem;
+}
+
+nav {
+  ul {
+    @include clear-list;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    @include clear-btn;
+  }
+}
+
+button {
+  line-height: inherit;
+}
+
+img,
+svg {
+  height: auto;
+  max-width: 100%;
+}
+
+button {
+  color: inherit;
+}
+
+iframe {
+  border: 0;
+}
+
+figcaption {
+  margin-top: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+}
+
+tr {
+  vertical-align: top;
+}

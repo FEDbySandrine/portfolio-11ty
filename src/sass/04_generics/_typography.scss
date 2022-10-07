@@ -1,0 +1,383 @@
+/* ==========================================================================
+   # TYPOGRAPHY
+	 https://www.aleksandrhovhannisyan.com/blog/fluid-type-scale-with-css-clamp/
+   ========================================================================== */
+
+html {
+	font-size: #{ $base-font-size + '%'};
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: $font-stack-default;
+	font-family: $font-stack-brand;
+	font-size: var(--font-size-base);
+	line-height: $line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dt,
+dd,
+blockquote,
+pre,
+address,
+hr {
+	// margin-bottom: calc(var(--line-height) * var(--breather) * 1rem);
+	// margin-bottom: #{$leading-rem + 'rem'};
+	margin-bottom: var(--sp-md);
+}
+
+hr {
+	// margin-top: #{$leading-rem + 'rem'};
+}
+
+input,
+select,
+textarea {
+	font-family: inherit;
+  font-size: 100%;
+}
+
+strong,
+b {
+	font-weight: 600;
+}
+
+a {
+	border-radius: 1px;
+
+  &:hover,
+  &:focus {
+  	color: var(--co-accent-secondary);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt {
+	color: var(--co-text-primary);
+	font-family: $font-stack-brand-serif;
+	font-weight: 500;
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1.35;
+}
+
+h1 {
+	font-size: clamped(22px, 40px);
+	// font-size: var(--font-size-xxxl);
+	margin-bottom: var(--sp-xl);
+	max-width: 35ch;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+dt {
+	font-size: 1.25rem;
+	// margin-bottom: #{0.5 * $leading-rem + 'rem'};
+}
+
+dd {
+	// font-size: 1rem;
+}
+
+.overline {
+	color: var(--co-accent-secondary);
+	display: flex;
+	align-items: center;
+	font-family: $font-stack-brand;
+	font-size: 0.875rem;
+	font-weight: 700;
+  // line-height: #{0.75 * $leading-rem + 'rem'};
+	text-transform: uppercase;
+	margin-left: -100px;
+
+	&.mb\:sm {
+		// margin-bottom: #{0.5 * $leading-rem + 'rem'};
+	}
+
+	&:before {
+		content: "";
+		display: inline-block;
+		width: 80px;
+	  height: 0.0625rem;
+	  background: var(--co-accent-secondary);
+		margin-right: 20px;
+	}
+}
+
+.subtitle {
+	font-size: clamped(18px, 20px);
+	color: var(--co-text-primary);
+	font-family: $font-stack-brand;
+}
+
+blockquote {
+	font-family: $font-stack-brand-serif;
+
+	> *:not(cite) {
+		font-size: clamp(1.125rem, 1.0179rem + 0.5357vw, 1.5rem);
+	  // line-height: #{1.25 * $leading-rem + 'rem'};
+		// margin-bottom: #{0.5 * $leading-rem + 'rem'};
+	}
+}
+
+cite {
+	font-family: $font-stack-default;
+	font-size: 0.875rem;
+	font-style: normal;
+}
+
+// h1 {
+// 	font-size: calc(9.6vw + 1.5rem);
+//
+// 	@include mq('>s') {
+// 		font-size: rem(70px);
+// 	}
+//
+// 	@include mq('>m') {
+// 		font-size: rem(80px);
+// 	}
+//
+// 	@include mq('>xl') {
+// 		font-size: rem(95px);
+// 	}
+//
+// 	@include mq('>xxl') {
+// 		font-size: rem(110px);
+// 	}
+// }
+//
+// h2 {
+// 	font-size: calc(5vw + 1.5rem);
+//
+// 	@include mq('>m') {
+// 		font-size: rem(64.5px);
+// 	}
+//
+// 	@include mq('>xl') {
+// 		font-size: rem(80px);
+// 	}
+//
+// 	@include mq('>xxl') {
+// 		font-size: rem(93px);
+// 	}
+// }
+
+// h3 {
+// 	font-size: rem(24px);
+//
+// 	@media only screen and (max-width: $breakpoint-smallish) {
+// 		font-size: rem(22px);
+// 	}
+// }
+//
+// h4 {
+// 	font-size: rem(20px);
+//
+// 	@media only screen and (max-width: $breakpoint-smallish) {
+// 		font-size: rem(18px);
+// 	}
+// }
+//
+// h5 {
+// 	font-size: rem(18px);
+//
+// 	@media only screen and (max-width: $breakpoint-smallish) {
+// 		font-size: rem(16px);
+// 	}
+// }
+//
+// h6 {
+// 	font-size: 1rem;
+// }
+//
+// p,
+// ul,
+// ol {
+// 	font-size: 1rem;
+// 	margin: 0 0 1em 0;
+// }
+//
+// ul,
+// ol {
+// 	margin-left: 20px;
+// 	padding: 0;
+// }
+//
+// li {
+// 	margin: 0;
+// 	padding: 0;
+// }
+//
+// a {
+// 	color: $color-link;
+// 	text-decoration: underline;
+// 	transition: color 0.1s linear;
+// 	&:focus {
+// 		outline: 5px auto -webkit-focus-ring-color;
+// 	}
+//
+// 	&:focus,
+// 	&:hover {
+// 		color: darken($color-link, 10%);
+// 	}
+//
+// 	&:hover {
+// 		outline-width: 0;
+// 	}
+//
+// 	&:active {
+// 		color: darken($color-link, 20%);
+// 		outline-width: 0;
+// 	}
+//
+// 	&:focus:not(:focus-visible) {
+// 		outline: none;
+// 	}
+//
+// 	img {
+// 		border: none;
+// 	}
+// }
+
+// blockquote {
+// 	font-family: $font-stack-brand;
+// 	margin: 1.25em 0;
+// 	padding: 0;
+// 	font-style: italic;
+// 	font-size: rem(20px);
+//
+// 	@include mq('>m') {
+// 		font-size: rem(28px);
+// 	}
+// }
+//
+// .copy {
+// 	&--xxl {
+// 		font-size: rem(18px);
+//
+// 		@include mq('>s') {
+// 			font-size: rem(20px);
+// 		}
+//
+// 		@include mq('>m') {
+// 			font-size: rem(22px);
+// 		}
+//
+// 		@include mq('>xl') {
+// 			font-size: rem(25px);
+// 		}
+// 	}
+// }
+//
+// .heading {
+// 	line-height: 0.95;
+//
+// 	&--m {
+// 		font-size: rem(28px);
+//
+// 		@include mq('>m') {
+// 			font-size: rem(32px);
+// 		}
+//
+// 		@include mq('>xl') {
+// 			font-size: rem(40px);
+// 		}
+// 	}
+//
+// 	&--l {
+// 		font-size: rem(30px);
+//
+// 		@include mq('>m') {
+// 			font-size: rem(40px);
+// 		}
+//
+// 		@include mq('>xl') {
+// 			font-size: rem(50px);
+// 		}
+//
+// 		@include mq('>xxl') {
+// 			font-size: rem(60px);
+// 		}
+// 	}
+//
+// 	&--xl {
+// 		font-size: calc(5vw + 1.5rem);
+//
+// 		@include mq('>m') {
+// 			font-size: rem(64.5px);
+// 		}
+//
+// 		@include mq('>xl') {
+// 			font-size: rem(80px);
+// 		}
+//
+// 		@include mq('>xxl') {
+// 			font-size: rem(93px);
+// 		}
+// 	}
+//
+// 	&--xl-bis {
+// 		font-size: calc(6.10vw + 1rem);
+//
+// 		@include mq('>s') {
+// 			font-size: rem(52px);
+// 		}
+//
+// 		@include mq('>m') {
+// 			font-size: rem(64.5px);
+// 		}
+//
+// 		@include mq('>xl') {
+// 			font-size: rem(80px);
+// 		}
+//
+// 		@include mq('>xxl') {
+// 			font-size: rem(110px);
+// 		}
+// 	}
+//
+// 	&--xxl {
+// 		font-size: calc(9.6vw + 1.5rem);
+//
+// 		@include mq('>s') {
+// 			font-size: rem(70px);
+// 		}
+//
+// 		@include mq('>m') {
+// 			font-size: rem(80px);
+// 		}
+//
+// 		@include mq('>xl') {
+// 			font-size: rem(95px);
+// 		}
+//
+// 		@include mq('>xxl') {
+// 			font-size: rem(110px);
+// 		}
+// 	}
+// }
+//
+// .link {
+// 	font-size: rem(14px);
+//   font-family: var(--font-links);
+// }

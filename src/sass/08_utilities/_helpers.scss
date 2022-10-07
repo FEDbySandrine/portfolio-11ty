@@ -1,0 +1,57 @@
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
+}
+
+.min-height {
+  &\:full {
+    min-height: calc(100vh - var(--header-height));
+    min-height: calc(100vh - var(--header-height));
+  }
+}
+
+@each $index, $value in $maxWidthChars {
+	.max-w-ch\:#{$index} {
+		max-width: var(--max-w-ch-#{$index});
+	}
+}
+
+.container-fit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.img-fit {
+  overflow: hidden;
+
+  img {
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1.01);
+  }
+}
+
+.reset-list {
+  @include clear-list;
+}
+
+.v-align {
+	display: flex;
+	align-items: center;
+}

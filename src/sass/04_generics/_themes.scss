@@ -1,0 +1,82 @@
+:root {
+  // colors
+  @each $color, $value in $colorsMap {
+    --co-#{$color}: #{map-deep-get($colorsMap, $color,'default')};
+  }
+  --co-avatar-bg: var(--co-background);
+
+  // fonts
+  --font-headings: #{$font-stack-brand};
+  --font-links: #{$font-stack-brand};
+
+  // theme
+  --th-background-color: var(--co-background);
+  --th-border-color: var(--co-background);
+  --th-color: var(--co-text-secondary);
+  --th-color-link: var(--co-accent-secondary);
+  --th-selection: var(--co-text-primary);
+}
+
+
+body {
+  background-color: var(--th-background-color);
+  color: var(--th-color);
+}
+
+a {
+  color: var(--th-color-link);
+}
+
+::selection {
+  background-color: var(--th-selection);
+  color: var(--th-background-color);
+}
+
+.theme {
+  background-color: var(--th-background-color);
+  border-color: var(--th-border-color);
+  color: var(--th-color);
+
+  a:hover,
+  a:focus {
+    background-color: var(--th-color);
+    color: var(--th-background-color);
+  }
+
+  // &\:primary,
+  // &\:primary-o,
+  // &\:secondary,
+  // &\:secondary-o {
+  //   --th-color-link: var(--th-color);
+  //   --th-selection: var(--th-color);
+  // }
+
+  &\:primary,
+  &\:secondary {
+    --th-color: var(--co-background);
+    --th-color-link: var(--th-color);
+    --th-selection: var(--th-color);
+  }
+
+  &\:primary {
+    --th-background-color: var(--co-accent-primary);
+    --th-border-color: var(--co-accent-primary);
+  }
+
+  // &\:primary-o {
+  //   --th-background-color: var(--co-background);
+  //   --th-border-color: rgba(var(--co-accent-primary), .25);
+  //   --th-color: var(--co-accent-primary);
+  // }
+
+  &\:secondary {
+    --th-background-color: var(--co-accent-secondary);
+    --th-border-color: var(--co-accent-secondary);
+  }
+
+  // &\:primary-o {
+  //   --th-background-color: var(--co-background);
+  //   --th-border-color: rgba(var(--co-accent-secondary), .25);
+  //   --th-color: var(--co-accent-secondary);
+  // }
+}

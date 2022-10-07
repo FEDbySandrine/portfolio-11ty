@@ -1,0 +1,23 @@
+{
+    "dipan": {
+      "quote": "<p>Sandrine loves discipline in the areas of web standards and architecture, and is a great teacher in that space.</p>",
+      "author": "Dipan Chauhan",
+      "role": "Tech Lead at Digital Arts Network"
+    },
+    "trent": {
+      "quote": "<p>Sandrine not only has extensive knowledge about digital accessibility, but also a way of imparting that knowledge that is clear and concise.</p>",
+      "author": "Trent Morgan",
+      "role": "Web Developer at Big Fish Creative"
+    },
+    "jordan": {
+      "quote": "<p>I've been quite impressed with how you've adapted to a median between our two styles of working considering how little explanation I was able to give you.</p>",
+      "author": "Jordan",
+      "role": "Developer at Ghost Street"
+    },
+    "david": {
+      "quote": "<p>Her feedback and insights on the process and resulting report have provided us with clear and actionable results.</p>",
+      "full": "<p>Sandrine was involved in an accessability audit for Napier city council.</p><p>Her feedback and insights on the process and resulting report have provided us with clear and actionable results.</p><p>I would recommend Sandrine and this process to anyone looking to improve their website.</p>",
+      "author": "David Harris",
+      "role": "Information Management Team Leader at Napier City Council"
+    }
+}

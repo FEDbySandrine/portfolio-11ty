@@ -1,0 +1,99 @@
+@keyframes box-expand {
+  to {
+    // background-color: var(--co-background);
+    border-color: var(--co-borders);
+    // width: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+
+@keyframes img-reveal {
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+@keyframes heading-reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes copy-reveal {
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .js {
+    [data-anim="box-expand"] {
+      &::before {
+        border-color: transparent;
+        left: 50%;
+        right: 50%;
+      }
+
+      .heading {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+
+      picture {
+        clip-path: inset(0 99.9% 0 0);
+        opacity: 0;
+      }
+
+      .home-section__tag,
+      .home-section__copy,
+      .copy {
+        opacity: 0;
+      }
+
+      &.box-expand {
+        &::before {
+          animation-name: box-expand;
+          animation-duration: var(--anim-home-section-duration);
+          animation-fill-mode: forwards;
+        }
+
+        .heading {
+          animation-name: heading-reveal;
+          animation-duration: var(--anim-home-section-duration);
+          animation-fill-mode: forwards;
+        }
+
+        .home-section__tag,
+        .home-section__copy,
+        .copy {
+          animation-name: copy-reveal;
+          animation-duration: 1s;
+          animation-delay: calc(var(--anim-home-section-duration) + 0.75s);
+          animation-fill-mode: forwards;
+        }
+
+        picture {
+          animation-name: img-reveal;
+          animation-duration: 1s;
+          animation-delay: var(--anim-home-section-duration);
+          animation-fill-mode: forwards;
+
+          &:nth-child(2) {
+            animation-delay: calc(var(--anim-home-section-duration) + 0.05s);
+          }
+
+          &:nth-child(3) {
+            animation-delay: calc(var(--anim-home-section-duration) + 0.1s);
+          }
+
+          &:nth-child(4) {
+            animation-delay: calc(var(--anim-home-section-duration) + 0.15s);
+          }
+        }
+      }
+    }
+  }
+}

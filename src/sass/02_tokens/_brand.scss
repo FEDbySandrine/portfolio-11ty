@@ -1,0 +1,32 @@
+/* ==========================================================================
+   # BRAND
+   ========================================================================== */
+
+// FONTS
+$font-stack-default: Verdana, sans-serif;
+$font-stack-brand: 'IBM Plex Sans', sans-serif;
+$font-stack-brand-serif: 'IBM Plex Serif', serif;
+
+// COLORS
+$colorsMap: (
+  "background": (
+    "default": #FFFDFA,
+    "dark": #121212,
+  ),
+  "text-primary": (
+    "default": #002A44,
+    "dark": rgba(#fff, .7),
+  ),
+  "text-secondary": (
+    "default": #667883,
+    "dark": rgba(#fff, .5),
+  ),
+  "accent-primary": (
+    "default": #254D86,
+    "dark": mix(#fff, #254D86, $weight: 40%),
+  ),
+  "accent-secondary": (
+    "default": #257E86,
+    "dark": mix(#fff, #257E86, $weight: 20%),
+  ),
+)

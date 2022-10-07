@@ -1,0 +1,78 @@
+/* ==========================================================================
+   # MIXINS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   ## Resets
+   -------------------------------------------------------------------------- */
+
+@mixin clear-list {
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding: 0;
+}
+
+@mixin clear-dlist {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+@mixin clear-dd {
+  margin-left: 0;
+}
+
+@mixin clear-btn {
+  background-color: transparent;
+  border: 0;
+  font-size: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------------------------------------------------------------
+   ## Media queries
+   -------------------------------------------------------------------------- */
+
+@mixin mq($args...) {
+  $query: '';
+  @each $arg in $args {
+    $op: '';
+    @if ($query != '') {
+      $op: ' and ';
+    }
+    $query: $query + $op + media-query($arg);
+  }
+
+  @media #{$query} {
+    @content;
+  }
+}
+
+/* --------------------------------------------------------------------------
+## Container queries
+-------------------------------------------------------------------------- */
+// @mixin contain($value: layout inline-size style) {
+//   contain: $value; /* For browsers that support Container Queries */
+//   --css-contain: #{$value}; /* For the polyfill to use */
+// }
+//
+// @mixin container($cq) {
+//   @container (#{$cq}) {
+//     /* For browsers that support Container Queries */
+//     @content;
+//   }
+//
+//   @media --css-container and ($cq) {
+//     /* For the polyfill to use */
+//     @content;
+//   }
+// }
+
+/* --------------------------------------------------------------------------
+## Layout
+-------------------------------------------------------------------------- */
+@mixin align-center {
+  margin-left: auto;
+  margin-right: auto;
+}

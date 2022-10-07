@@ -1,0 +1,22 @@
+.logo {
+  color: var(--co-text-primary);
+
+  svg {
+    aspect-ratio: 7.275;
+    display: block;
+    height: var(--header-ft-size);
+  }
+}
+
+.avatar {
+  background-color: var(--co-avatar-bg);
+  border-radius: 100%;
+  aspect-ratio: 1;
+  max-width: 80px;
+  overflow: hidden;
+
+  svg {
+    object-fit: fill;
+    aspect-ratio: 1;
+  }
+}
