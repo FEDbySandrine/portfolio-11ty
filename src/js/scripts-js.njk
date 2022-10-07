@@ -2,7 +2,9 @@
 permalink: "js/scripts.js"
 ---
 {%- set js -%}
-  {%- include "./vendors/jquery-3.6.0.min.js" -%}
+  {#%- include "./vendors/jquery-3.6.0.min.js" -%#}
+  {#%- include "./vendors/cqfill.js" -%#}
+
   {%- include "./app.js" -%}
 {%- endset -%}
 {{ js | jsmin | safe }}
