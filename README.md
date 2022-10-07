@@ -1,11 +1,11 @@
-# Roselawn static website
+# Portfolio static website
 
 ## NPM Dev Dependencies
 * Latest Node (v18.6.0)
 * Latest NPM (v8.13.2)
 * Static site generator [Eleventy](https://www.11ty.dev/)
 * [Eleventy SVG sprite](https://www.npmjs.com/package/eleventy-plugin-svg-sprite)
-* [WEBP converter CLI](https://www.npmjs.com/package/webp-converter-cli)
+* [Simple WEBP converter](https://www.npmjs.com/package/simple-webp-converter)
 
 ## Run Project
 1. `npm install`
