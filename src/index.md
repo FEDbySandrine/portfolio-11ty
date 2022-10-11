@@ -54,6 +54,7 @@ preview:  "social-homepage@2x"
 
 <div class="l-concealer">
   <section class="l-concealer__spill l-section:fill theme theme:primary">
+    <h2 class="sr-only">Testimonials</h2>
     {%- set reference = "dipan" -%}
     {%- include './_includes/modules/testimonials.njk' -%}
 
