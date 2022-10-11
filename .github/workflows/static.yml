@@ -16,11 +16,10 @@ jobs:
         with:
           node-version: '18.x'
 
+      - run: git config --global user.email "fedbysandrine@gmail.com"
+      - run: git config --global user.name "Sandrine"
       - run: npm ci
       - run: npm run deploy
-      - run: |
-       git config --global user.email "fedbysandrine@gmail.com"
-       git config --global user.name "Sandrine"
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
