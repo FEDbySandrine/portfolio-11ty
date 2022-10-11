@@ -32,7 +32,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("svgImage", function(filename, width, height, alt, rules="") {
     var icon_data = "";
     if( rules != "" ) { icon_data += " class=\"" + rules + "\"";}
-    return `<svg role="img" aria-labelledby="symbol-${filename}" width="${width}" height="${height}" ${icon_data}><title id="symbol-${filename}">${alt}</title><use xlink:href="#svg-${filename}"></use></svg>`;
+    return `<span class="sr-only">${alt}</span><svg role="img" aria-hidden="true" width="${width}" height="${height}" ${icon_data}><use xlink:href="#svg-${filename}"></use></svg>`;
   });
   eleventyConfig.addShortcode("svgIcon", function(filename, width, height, alt, rules="") {
     var icon_data = "";
@@ -48,9 +48,9 @@ module.exports = function (eleventyConfig) {
     return (
       '<picture'+ `${picture_data}` +'>' +
         '<source media="(min-width: 460px)" srcset="/assets/images/' + `${filename}` + '.webp" type="image/webp">' +
-        '<source media="(min-width: 460px)" srcset="/assets/images/' + `${filename}` + '.' + `${ext}` + '" type="image/jpeg" />' +
-        '<source media="(max-width: 459px)" srcset="/assets/images/' + `${filename}` + '.sm.webp" srcset="/assets/images/' + `${filename}` + '.sm@2x.webp" type="image/webp" />' +
-        '<img src="/assets/images/' + `${filename}` + '.sm.' + `${ext}` + '" srcset="/assets/images/' + `${filename}` + '.sm@2x.' + `${ext}` + ' 2x" alt="' + `${alt}` + '"' + (alt=="" ? ' aria-hidden="true"' : '') + (lazy ? ' loading="lazy"' : '') + ' width="' + `${width}` + '" height="' + `${height}` + '" />' +
+        '<source media="(min-width: 460px)" srcset="/assets/images/' + `${filename}` + '.' + `${ext}` + '" type="image/jpeg">' +
+        '<source media="(max-width: 459px)" srcset="/assets/images/' + `${filename}` + '.sm.webp" srcset="/assets/images/' + `${filename}` + '.sm@2x.webp" type="image/webp">' +
+        '<img src="/assets/images/' + `${filename}` + '.sm.' + `${ext}` + '" srcset="/assets/images/' + `${filename}` + '.sm@2x.' + `${ext}` + ' 2x" alt="' + `${alt}` + '"' + (alt=="" ? ' aria-hidden="true"' : '') + (lazy ? ' loading="lazy"' : '') + ' width="' + `${width}` + '" height="' + `${height}` + '">' +
       '</picture>'
     );
   });
