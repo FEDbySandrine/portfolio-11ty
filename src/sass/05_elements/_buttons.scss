@@ -10,4 +10,9 @@
       transform: translateY(0%);
     }
   }
+
+  &-ico {
+    padding: var(--sp-xs);
+    border-radius: 100%;
+  }
 }

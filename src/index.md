@@ -5,7 +5,7 @@ preview:  "social-homepage@2x"
 ---
 
 <section class="l-section l-concealer">
-  <div class="l-concealer__cover v-align">
+  <div class="l-concealer__cover l-section:fill v-align">
     <div class="wrapper">
       {%- include './_includes/modules/content-intro.njk' -%}
     </div>
@@ -53,7 +53,7 @@ preview:  "social-homepage@2x"
 </section>
 
 <div class="l-concealer">
-  <section class="l-concealer__spill l-banner theme theme:primary">
+  <section class="l-concealer__spill l-section:fill theme theme:primary">
     {%- set reference = "dipan" -%}
     {%- include './_includes/modules/testimonials.njk' -%}
 
@@ -78,6 +78,7 @@ preview:  "social-homepage@2x"
         <li>Shopify</li>
         <li>Webflow</li>
         <li>Wordpress</li>
+        <li>Developer Tools</li>
       </ul>
       <div style="column-count: 2">
         <div>
@@ -86,7 +87,24 @@ preview:  "social-homepage@2x"
         </div>
         {%- set reference = "jordan" -%}
         {%- include './_includes/modules/testimonials.njk' -%}
-      </p>
+      </div>
     </div>
   </section>
 </div>
+
+<section class="l-section">
+  <div class="wrapper">
+    <h2 class="overline">Interests</h2>
+    <p>Currently, I'm particularly focusing on the following topics:</p>
+    <ul style="display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; grid-auto-flow: dense;">
+      <li>Usability</li>
+      <li>Design systems</li>
+      <li>Web vitals</li>
+      <li>Web components</li>
+      <li>Green web</li>
+      <li>Scalable Modern CSS</li>
+      <li>Dev flow automation</li>
+      <li>Indie web</li>
+    </ul>
+  </div>
+</section>

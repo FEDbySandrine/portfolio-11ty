@@ -1,0 +1,19 @@
+/* ==========================================================================
+   # SETTINGS
+   # Site-wide settings
+   ========================================================================== */
+
+/// Paths
+// Collection of useful paths for assets
+// @type String
+$path_fonts:  '/assets/fonts/';
+$path_imgs:   '/assets/images/';
+$path_svgs:   '/assets/svg/';
+
+/// Document settings
+$charset:  "utf-8";
+$lang:     "en-NZ";
+
+/// Site options
+$font-display: swap;
+$sticky-header: true;

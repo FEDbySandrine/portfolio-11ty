@@ -14,6 +14,9 @@
   @each $index, $value in $maxWidthChars {
     --max-w-ch-#{$index}: #{$value};
   }
+  @each $index, $value in $icoSizes {
+    --ico-#{$index}: #{$value};
+  }
   @for $i from 1 through length($type-steps) {
     $step: list.nth($type-steps, $i);
     $power: $i - $type-base-index;
@@ -111,6 +114,7 @@ button {
 
 img,
 svg {
+  display: block;
   height: auto;
   max-width: 100%;
 }

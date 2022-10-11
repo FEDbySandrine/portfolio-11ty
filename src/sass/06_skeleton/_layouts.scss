@@ -18,6 +18,11 @@
 .l  {
   &-section {
     margin-bottom: clamp(4rem, 2.8571rem + 5.7143vw, 8rem);
+
+    &\:fill {
+      padding-top: clamp(4rem, 2.8571rem + 5.7143vw, 8rem);
+      padding-bottom: clamp(4rem, 2.8571rem + 5.7143vw, 8rem);
+    }
   }
 
   &-banner {
@@ -40,13 +45,15 @@
       position: relative;
       z-index: var(--z-over);
 
-      &::after {
+      &::after, &::before {
         content: '';
         display: table;
       }
     }
     &__spill {
       margin-bottom: 0.1px; // hack 1px bug;
+      max-height: 100vh;
+      overflow: auto;
       position: sticky;
       top: var(--header-height);
     }

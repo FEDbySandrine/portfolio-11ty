@@ -1,0 +1,12 @@
+.list {
+  &-inline {
+    @include clear-list;
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--sp-sm);
+
+    a {
+      display: block;
+    }
+  }
+}

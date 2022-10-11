@@ -2,11 +2,12 @@
 
 // 01. Settings
 @import
-  "01_config/globals";
+  "01_config/settings";
 
 // 02. Tokens
 @import
-  "02_tokens/brand";
+  "02_tokens/brand",
+  "02_tokens/globals";
 
 // 03. Tools
 @import
@@ -25,13 +26,15 @@
   "05_elements/buttons",
 //   "05_elements/forms",
 //   "05_elements/links",
+  "05_elements/icons",
   "05_elements/logo";
 //
 // 06. Skeleton
 @import
-  "06_skeleton/header",
   "06_skeleton/footer",
-  "06_skeleton/layouts";
+  "06_skeleton/header",
+  "06_skeleton/layouts",
+  "06_skeleton/lists";
 //
 // 07. Components
 @import
