@@ -1,0 +1,8 @@
+{%- for source, project in projects -%}
+    <div>
+        <h3>{{ project.name }}</h3>
+        <p>{{ project.client }}</p>
+        {%- set reference = project.testimonial -%}
+        {%- include './testimonials.njk' -%}
+    </div>
+{%- endfor -%}

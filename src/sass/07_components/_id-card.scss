@@ -1,8 +1,41 @@
 .id-card {
-  @container (min-width: 400px) {
+  @include align-center;
+  display: flex;
+  flex-flow: column wrap;
+  gap: var(--sp-lg);
+
+  &__media {
+    @include align-center;
+    flex: none;
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__links {
+    margin-top: var(--sp-sm);
+  }
+
+  @container (max-width: 599px) {
+    max-width: 40ch;
+
+    &__contact,
+    &__links {
+      text-align: center;
+    }
+
+    ul {
+      justify-content: center;
+    }
+  }
+
+  @container (min-width: 600px) {
     align-items: center;
     flex-flow: row nowrap;
-    display: flex;
-    gap: var(--sp-xl);
+
+    &:has(.ico\:xl) {
+      gap: var(--sp-xl);
+    }
   }
 }

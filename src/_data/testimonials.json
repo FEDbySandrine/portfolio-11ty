@@ -9,6 +9,21 @@
       "author": "Trent Morgan",
       "role": "Web Developer at Big Fish Creative"
     },
+    "pete": {
+      "quote": "<p>When Sandrine is working to deliver the best user experience, it's to all users. Championing and applying best practice and web accessibility standards across the board.</p>",
+      "author": "Peter Gray",
+      "role": "Senior Developer at Digital Arts Network"
+    },
+    "ludo": {
+      "quote": "<p>Sandrine has an exceptional attention to details and she is one of the easiest front end developer to work with. Always pushing standards forward being a fervent advocate of best practices, reusability and maintenability of her work. </p>",
+      "author": "Ludovic Royer",
+      "role": "Senior .NET Back-End Web Developer at Orchard Marketing"
+    },
+    "simon": {
+      "quote": "<p>Dedicated, meticulous, experienced and passionate for UI development, Sandrine always delivered the highest quality, maintainable code which was thoroughly tested and practically bullet proof. </p>",
+      "author": "Simon Taggart",
+      "role": "Lead Interface Developer at Orchard Marketing"
+    },
     "jordan": {
       "quote": "<p>I've been quite impressed with how you've adapted to a median between our two styles of working considering how little explanation I was able to give you.</p>",
       "author": "Jordan",

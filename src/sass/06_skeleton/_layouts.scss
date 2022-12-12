@@ -69,6 +69,27 @@
       padding-top: clamp(4rem, 2.8571rem + 5.7143vw, 8rem);
     }
   }
+
+  &-slider {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    // column-gap: var(--sp-xl);
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+
+   &::-webkit-scrollbar { 
+        display: none;  /* Safari and Chrome */
+    }
+
+    > * {
+      scroll-snap-align: center;
+      padding: 0 var(--sp-xxl);
+      box-sizing: content-box;
+    }
+  }
 }
 
 .full-h {

@@ -9,4 +9,35 @@
       display: block;
     }
   }
+
+  &-cols {
+    @include clear-list;
+    display: grid; 
+    grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+    column-gap: var(--sp-xl);
+    row-gap: var(--sp-xs);
+    grid-auto-flow: dense;
+
+    & > * { white-space: nowrap; }
+
+    &:not(:last-child) {
+      margin-bottom: var(--sp-xl);
+    }
+  }
+}
+
+.dlist {
+  &-cols\:3 {
+    @include clear-dlist;
+
+    @container (min-width: 650px) {
+      display: flex;
+      flex-flow: row wrap;
+      column-gap: var(--sp-xl);
+
+      > * {
+        flex: 1;
+      }
+    }
+  }
 }

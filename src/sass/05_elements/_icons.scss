@@ -11,11 +11,10 @@
     background-color: rgba(255,255,255, 0.25);
     border-radius: 100%;
     overflow: hidden;
-    // width: var(--ico-xl);
 
     img {
       aspect-ratio: 1;
-      margin-top: 10px !important;
+      margin-top: 5px !important;
       object-fit: fill;
       width: 100%;
     }

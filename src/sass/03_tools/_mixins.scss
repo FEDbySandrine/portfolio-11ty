@@ -16,10 +16,10 @@
 @mixin clear-dlist {
   margin-bottom: 0;
   margin-top: 0;
-}
 
-@mixin clear-dd {
-  margin-left: 0;
+  dd {
+    margin-left: 0;
+  }
 }
 
 @mixin clear-btn {
