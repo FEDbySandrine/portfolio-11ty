@@ -7,11 +7,34 @@
         "blurb": "",
         "description": "",
         "gallery": "",
+        "clients_logo": ["auckland-transport.png", "auckland-council.png", "ministry-of-health.png", "napier-council.png", "asb.png", "new-world.png"],
         "testimonial": "trent"
+    },
+    "tnz": {
+        "name": "Tourism New Zealand",
+        "url": "https://www.newzealand.com/nz/",
+        "tags": ["FED", "lead", "integration", "design", "UX", "optimisation", "pattern library"],
+        "client": "Digital Arts Network",
+        "client_url": "",
+        "blurb": "",
+        "description": "",
+        "gallery": "",
+        "testimonial": ""
+    },
+    "inclusivenz": {
+        "name": "Inclusive Aoteraroa",
+        "url": "https://inclusiveaotearoa.nz/",
+        "tags": ["accessibility", "audit", "consultancy", "technical support"], 
+        "client": "Access Advisors",
+        "client_url": "",
+        "blurb": "",
+        "description": "",
+        "gallery": "",
+        "testimonial": ""
     },
     "roselawn": {
         "name": "Roselawn",
-        "url": "",
+        "url": "https://www.roselawn.ie/",
         "client": "Siren Design",
         "client_url": "",
         "blurb": "",
@@ -21,27 +44,16 @@
     },
     "landid": {
         "name": "Landid",
-        "url": "",
         "client": "Siren Design",
-        "client_url": "",
+        "client_url": "https://www.landid.co.uk/",
         "blurb": "",
         "description": "",
         "gallery": "",
         "testimonial": ""
     },
-    "tnz": {
-        "name": "Tourism New Zealand",
-        "url": "",
-        "client": "Digital Arts Network",
-        "client_url": "",
-        "blurb": "",
-        "description": "",
-        "gallery": "",
-        "testimonial": ""
-    },
-    "infinity": {
-        "name": "Infinity",
-        "url": "",
+    "intent": {
+        "name": "Intent Journey",
+        "url": "https://www.intentjourney.co.nz/",
         "client": "Ghost Street",
         "client_url": "",
         "blurb": "",

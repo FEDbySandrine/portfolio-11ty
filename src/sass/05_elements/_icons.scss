@@ -20,3 +20,11 @@
     }
   }
 }
+
+
+.jpath-content {
+  fill: var(--th-background-color);
+  a:hover & {
+    fill: var(--th-color);
+  }
+}

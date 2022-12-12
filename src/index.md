@@ -62,7 +62,7 @@ preview:  "social-homepage@2x"
 <div class="l-concealer">
   <section class="l-concealer__spill l-section:fill theme theme:primary">
     <h2 class="sr-only">Testimonials</h2>
-    <div class="l-slider">
+    <div class="l-slider" tabindex="0">
       {%- set reference = "pete" -%}
       {%- include './_includes/modules/testimonials.njk' -%}
 
