@@ -10,6 +10,7 @@ module.exports = function (eleventyConfig) {
   // eleventyConfig.addPassthroughCopy("./src/js/vendors");
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
   eleventyConfig.addPassthroughCopy("./src/assets/images");
+  eleventyConfig.addPassthroughCopy("./src/assets/docs");
 
   eleventyConfig.addNunjucksAsyncFilter("jsmin", async function (
     code,
