@@ -12,7 +12,7 @@ $max-width: 1200px;
 
 $type-base-min: 16px;
 $type-base-max: 18px;
-$type-scale-min: 1.125;
+$type-scale-min: 1.075;
 $type-scale-max: 1.1275;
 $type-steps: 'xs', 'sm', 'base', 'md', 'lg', 'xl', 'xxl', 'xxxl', '4xl';
 $type-base-index: list.index($type-steps, 'base');
