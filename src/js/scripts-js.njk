@@ -7,7 +7,8 @@ permalink: "js/scripts.js"
 
   // Conditional Import
   if (!supportsContainerQueries) {
-    import("https://cdn.jsdelivr.net/npm/container-query-polyfill@0.2.4/dist/container-query-polyfill.modern.js");
+    {# import("https://cdn.jsdelivr.net/npm/container-query-polyfill@0.2.4/dist/container-query-polyfill.modern.js"); #}
+    {# import("https://cdn.jsdelivr.net/npm/container-query-polyfill@1/dist/container-query-polyfill.modern.js"); #}
   }
 
   {%- include "./app.js" -%}

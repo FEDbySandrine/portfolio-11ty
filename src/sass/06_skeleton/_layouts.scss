@@ -2,6 +2,18 @@
    # LAYOUTS
    ========================================================================== */
 
+   .warning  {
+    padding: var(--sp-sm);
+    background-color: rgba(#F00, 0.1);
+
+    p { margin-bottom: 0; }
+   }
+
+   @supports (container-type: inline-size) {
+      .warning {
+       display: none;
+      }
+   }
   
  .wrapper {
    @include align-center;
