@@ -15,12 +15,9 @@
 	position: relative;
 	max-width: 60ch;
 
-	.l-slider & {
-		min-width: 50ch;
-
-		@container (max-width: 599px) {
-			box-sizing: border-box;
-			min-width: 100vw;
+	@container (min-width: 600px) {
+		.l-slider & {
+			min-width: 50ch;
 		}
 	}
 
@@ -47,13 +44,23 @@
 
 
   	&:before {
-  		content: "";
-  		display: inline-block;
-  		width: 20px;
-  	  height: 0.0625rem;
-  	  background: var(--co-accent-primary);
-  		margin-right: 20px;
-      opacity: 0.5;
+		content: "";
+		display: inline-block;
+		width: 20px;
+		height: 0.0625rem;
+		background: var(--co-accent-primary);
+		margin-right: 20px;
+		opacity: 0.5;
   	}
+
+	.l-slider & {
+		margin-left: 0;
+
+		&:before {
+			content: "";
+			margin-right: 0;
+			width: 0;
+		}
+	}
   }
 }
