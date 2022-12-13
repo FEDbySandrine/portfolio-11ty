@@ -15,17 +15,9 @@ body {
 	line-height: $line-height;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+h1, h2, h3, h4, h5, h6,
 p,
-ul,
-ol,
-dt,
-dd,
+ul, ol, dt, dd,
 blockquote,
 pre,
 address,
@@ -37,7 +29,7 @@ input,
 select,
 textarea {
 	font-family: inherit;
-  font-size: var(--font-size-base);
+  	font-size: var(--font-size-base);
 }
 
 strong,
@@ -73,8 +65,7 @@ h3 {
 }
 
 h1 {
-	font-size: clamped(22px, 40px);
-	font-size: var(--font-size-xxxl);
+	font-size: var(--font-size-4xl);
 	margin-bottom: var(--sp-xl);
 	max-width: 35ch;
 }
@@ -106,8 +97,8 @@ dt {
 		content: "";
 		display: inline-block;
 		width: 80px;
-	  height: 0.0625rem;
-	  background: var(--co-accent-secondary);
+		height: 0.0625rem;
+		background: var(--co-accent-secondary);
 		margin-right: 20px;
 	}
 }
@@ -128,6 +119,6 @@ blockquote {
 
 cite {
 	font-family: $font-stack-default;
-	font-size: var(--font-size-sm);
+	font-size: var(--font-size-xs);
 	font-style: normal;
 }

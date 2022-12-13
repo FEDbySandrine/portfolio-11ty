@@ -24,6 +24,30 @@
       margin-bottom: var(--sp-xl);
     }
   }
+
+  &-tags {
+    @include clear-list;
+    li {
+      border: 1px solid var(--th-color);
+      // color: var(--th-background-color);
+      font-size: var(--font-size-xs);
+      border-radius: 3px;
+      padding: 0 5px;
+    }
+  }
+
+  &-logos {
+    @include clear-list;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    column-gap: var(--sp-xl);
+    row-gap: var(--sp-sm);
+
+    img {
+      width: 120px;
+    }
+  }
 }
 
 .dlist {

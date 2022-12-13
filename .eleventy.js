@@ -41,6 +41,16 @@ module.exports = function (eleventyConfig) {
   });
 
 
+
+  eleventyConfig.addShortcode("img", function(filename, alt="", width="100%", height="100%", lazy=true, ext="jpg", classname="") {
+    var img_data = "";
+    if(alt == "") { img_data +=" aria-hidden=\"true\""; }
+    if(lazy) { img_data +=" loading=\"lazy\""; }
+    if(classname) { img_data +=" class=\"" + classname+ "\""; }
+    return `<img src="/assets/images/${filename}.${ext}" alt="${alt}" ${img_data} width="${width}" height="${height}">`;
+  });
+
+
   eleventyConfig.addShortcode("imgResponsive", function(filename, width="100%", height="100%", alt="", rules="", lazy=true, ext="jpg") {
     var picture_data = "";
     if( rules != "" ) { picture_data += " class=\"" + rules + "\"";}

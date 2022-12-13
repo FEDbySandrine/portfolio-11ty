@@ -1,64 +1,144 @@
 {
     "a11y": {
+        "consultancy": true,
         "name": "Accessibility assessments",
         "url": "",
+        "tags": ["accessibility", "audit", "consultancy", "assessment", "research", "technical support", "dev training"],
         "client": "Access Advisors",
         "client_url": "",
         "blurb": "",
         "description": "",
         "gallery": "",
-        "clients_logo": ["auckland-transport.png", "auckland-council.png", "ministry-of-health.png", "napier-council.png", "asb.png", "new-world.png"],
-        "testimonial": "trent"
+        "testimonial": "trent",
+        "clients_logo": [
+            {
+                "file": "auckland-transport",
+                "ext": "png",
+                "alt": "Auckland Transport",
+                "width": "",
+                "height": ""
+            },
+            {
+                "file": "auckland-council",
+                "ext": "png",
+                "alt": "Auckland Council",
+                "width": "",
+                "height": ""
+            },
+            {
+                "file": "ministry-of-health",
+                "ext": "png",
+                "alt": "Ministry of Health",
+                "width": "",
+                "height": ""
+            },
+            {
+                "file": "napier-council",
+                "ext": "png",
+                "alt": "Napier City Council",
+                "width": "",
+                "height": ""
+            },
+            {
+                "file": "asb",
+                "ext": "png",
+                "alt": "ASB",
+                "width": "",
+                "height": ""
+            },
+            {
+                "file": "new-world",
+                "ext": "png",
+                "alt": "New World",
+                "width": "",
+                "height": ""
+            }
+        ]
+    },
+    "inclusivenz": {
+        "name": "Inclusive Aotearoa",
+        "url": "https://inclusiveaotearoa.nz/",
+        "tags": ["accessibility", "audit", "consultancy", "technical support"], 
+        "client": "Access Advisors",
+        "client_url": "",
+        "blurb": "Accessibility audit of wireframes, advices on integration, review of integration and FED support.",
+        "description": "",
+        "gallery": "",
+        "testimonial": "",
+        "thumbnail":
+        {
+            "ext": "png",
+            "width": "",
+            "height": ""
+        }
+    },
+    "roselawn": {
+        "name": "Roselawn",
+        "url": "https://www.roselawn.ie/",
+        "client": "Siren Design",
+        "tags": ["FED", "integration", "animation"],
+        "client_url": "",
+        "blurb": "",
+        "description": "Integrate design into responsive website with CSS transitions and custom JS behaviour.",
+        "gallery": "",
+        "testimonial": "",
+        "thumbnail":
+        {
+            "ext": "png",
+            "width": "",
+            "height": ""
+        }
+    },
+    "landid": {
+        "name": "Landid",
+        "url": "https://www.landid.co.uk/",
+        "client": "Siren Design",
+        "tags": ["FED", "integration", "animation"],
+        "client_url": "",
+        "blurb": "",
+        "description": "Integrate design into responsive website with CSS transitions and custom JS behaviour.",
+        "gallery": "",
+        "testimonial": "",
+        "thumbnail":
+        {
+            "ext": "png",
+            "width": "",
+            "height": ""
+        }
+    },
+    "intent": {
+        "name": "Intent Journey",
+        "tags": ["FED", "integration"],
+        "url": "https://www.intentjourney.co.nz/",
+        "client": "Ghost Street",
+        "client_url": "",
+        "blurb": "Integrated the single page of Intent Journey as placeholder until the design of the full website was ready.",
+        "description": "",
+        "gallery": "",
+        "testimonial": "",
+        "thumbnail":
+        {
+            "ext": "png",
+            "width": "",
+            "height": ""
+        }
     },
     "tnz": {
+        "feature": true,
         "name": "Tourism New Zealand",
         "url": "https://www.newzealand.com/nz/",
         "tags": ["FED", "lead", "integration", "design", "UX", "optimisation", "pattern library"],
         "client": "Digital Arts Network",
         "client_url": "",
         "blurb": "",
-        "description": "",
+        "description": "Lead FED on TNZ for 5 years, there is little I haven't done from redesign, new features, mobile first optimisation, CSS architecture, improving performance, pattern library, documentation, refactoring components, clearing legacy code, campaigns, A/B testing...",
         "gallery": "",
-        "testimonial": ""
-    },
-    "inclusivenz": {
-        "name": "Inclusive Aoteraroa",
-        "url": "https://inclusiveaotearoa.nz/",
-        "tags": ["accessibility", "audit", "consultancy", "technical support"], 
-        "client": "Access Advisors",
-        "client_url": "",
-        "blurb": "",
-        "description": "",
-        "gallery": "",
-        "testimonial": ""
-    },
-    "roselawn": {
-        "name": "Roselawn",
-        "url": "https://www.roselawn.ie/",
-        "client": "Siren Design",
-        "client_url": "",
-        "blurb": "",
-        "description": "",
-        "gallery": "",
-        "testimonial": ""
-    },
-    "landid": {
-        "name": "Landid",
-        "client": "Siren Design",
-        "client_url": "https://www.landid.co.uk/",
-        "blurb": "",
-        "description": "",
-        "gallery": "",
-        "testimonial": ""
-    },
-    "intent": {
-        "name": "Intent Journey",
-        "url": "https://www.intentjourney.co.nz/",
-        "client": "Ghost Street",
-        "client_url": "",
-        "blurb": "",
-        "description": "",
-        "gallery": "",
-        "testimonial": ""
+        "testimonial": "glenn",
+        "thumbnail":
+        {
+            "ext": "png",
+            "width": "",
+            "height": ""
+        }
     }
 }

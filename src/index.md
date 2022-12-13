@@ -74,6 +74,9 @@ preview:  "social-homepage@2x"
 
       {%- set reference = "ludo" -%}
       {%- include './_includes/modules/testimonials.njk' -%}
+
+      {%- set reference = "david" -%}
+      {%- include './_includes/modules/testimonials.njk' -%}
     </div>
   </section>
 
@@ -106,7 +109,7 @@ preview:  "social-homepage@2x"
       <li>Wordpress</li>
       <li>Developer Tools</li>
     </ul>
-    <div style="column-count: 2">
+    <div class="l-cols--var">
       <div>
         <p>I have been exposed to several environments, systems and libraries in various languages.</p>
         <p>Understanding of MVC and MVVM concepts allows me to get onboard quickly and work on UI components regardless of the framework used.</p>

@@ -2,6 +2,7 @@
    # LAYOUTS
    ========================================================================== */
 
+  
  .wrapper {
    @include align-center;
    container-type: inline-size;
@@ -36,6 +37,21 @@
 
     padding-bottom: var(--sp-xl);
     padding-top: var(--sp-xl);
+  }
+
+  &-cols {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: var(--sp-xl);
+  }
+
+  &-cols--var {
+    display: grid; 
+    row-gap: var(--sp-lg);
+    @container (min-width: 600px) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: var(--sp-xl);
+    }
   }
 
   &-concealer {

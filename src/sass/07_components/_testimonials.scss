@@ -14,11 +14,15 @@
 	// padding-left: clamp(3.75rem + 20px, 3.3929rem + 1.7857vw + 20px, 5rem + 20px);
 	position: relative;
 	max-width: 60ch;
-	min-width: 100vw;
 
-	// @container (min-width: 600px) {
+	.l-slider & {
 		min-width: 50ch;
-	// }
+
+		@container (max-width: 599px) {
+			box-sizing: border-box;
+			min-width: 100vw;
+		}
+	}
 
 	// &:before {
 	// 	content: "“";
