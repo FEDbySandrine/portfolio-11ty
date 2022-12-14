@@ -27,9 +27,14 @@
                 grid-row: 1 / span 1;
                 grid-column: 1 / span 2;
             }
-            &__title,
-            &__client {
-                grid-column: 1 / span 2;
+            // &__title,
+            // &__client {
+            //     grid-column: 1 / span 2;
+            // }
+
+            &__description {
+                display: flex;
+                align-items: flex-end;
             }
 
         }
