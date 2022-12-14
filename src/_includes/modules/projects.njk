@@ -2,12 +2,12 @@
     {%- for source, project in projects -%}
         <div class="project{% if project.feature %} project--feature{% endif %}{% if project.consultancy %} project--consultancy{% endif %}">
             <div class="project__name">
-                <a href="{{ project.url }}" target="_blank">
+                {%- if project.url | length -%}<a href="{{ project.url }}" target="_blank">{%- endif -%}
                     {%- if project.thumbnail | length -%}
                         <div class="project__thumbnail">{%- if project.url | length -%}{%- endif -%}{%- imgResponsive 'project-' + source, "800", "447", "", true, project.thumbnail.ext -%}{%- if project.url | length -%}{%- endif -%}</div>
                     {%- endif -%}
                     <h3 class="project__title">{%- if project.url | length -%}{%- endif -%}{{ project.name }}{%- if project.url | length -%}{%- endif -%}</h3>
-                </a>
+                {%- if project.url | length -%}</a>{%- endif -%}
                 <p class="project__client">{{ project.client }}</p>
                 {%- if project.clients_logo | length -%}
                 <ul class="project__clients list-logos">
