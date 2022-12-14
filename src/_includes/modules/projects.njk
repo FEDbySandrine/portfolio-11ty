@@ -1,11 +1,22 @@
 <div class="project__grid">
     {%- for source, project in projects -%}
         <div class="project{% if project.feature %} project--feature{% endif %}{% if project.consultancy %} project--consultancy{% endif %}">
-            {%- if project.thumbnail | length -%}
-                <div class="project__thumbnail">{%- if project.url | length -%}<a href="{{ project.url }}" target="_blank" aria-hidden="true">{%- endif -%}{%- imgResponsive 'project-' + source, "800", "447", "", true, project.thumbnail.ext -%}{%- if project.url | length -%}</a>{%- endif -%}</div>
-            {%- endif -%}
-            <h3 class="project__title">{%- if project.url | length -%}<a href="{{ project.url }}" target="_blank">{%- endif -%}{{ project.name }}{%- if project.url | length -%}</a>{%- endif -%}</h3>
-            <p class="project__client">{{ project.client }}</p>
+            <div class="project__name">
+                <a href="{{ project.url }}" target="_blank">
+                    {%- if project.thumbnail | length -%}
+                        <div class="project__thumbnail">{%- if project.url | length -%}{%- endif -%}{%- imgResponsive 'project-' + source, "800", "447", "", true, project.thumbnail.ext -%}{%- if project.url | length -%}{%- endif -%}</div>
+                    {%- endif -%}
+                    <h3 class="project__title">{%- if project.url | length -%}{%- endif -%}{{ project.name }}{%- if project.url | length -%}{%- endif -%}</h3>
+                </a>
+                <p class="project__client">{{ project.client }}</p>
+                {%- if project.clients_logo | length -%}
+                <ul class="project__clients list-logos">
+                    {%- for logo in project.clients_logo -%}
+                        <li>{% img 'logo-a11y-' + logo.file, logo.alt, logo.width, logo.height, true, logo.ext -%}</li>
+                    {%- endfor -%}
+                </ul>
+                {%- endif -%}
+            </div>
             {%- if project.tags | length -%}
             <div class="project__tags">
                 <ul class="list-tags list-inline">
@@ -15,23 +26,18 @@
                 </ul>
             </div>
             {%- endif %}
-            {%- if project.blurb | length -%}
-                <p class="project__blurb">{{ project.blurb }}</p>
-            {%- endif -%}
-            {%- if project.description | length -%}
-                <p class="project__description">{{ project.description }}</p>
-            {%- endif -%}
-            {%- if project.clients_logo | length -%}
-            <ul class="project__clients list-logos">
-                {%- for logo in project.clients_logo -%}
-                    <li>{% img 'logo-a11y-' + logo.file, logo.alt, logo.width, logo.height, true, logo.ext -%}</li>
-                {%- endfor -%}
-            </ul>
-            {%- endif -%}
-            {%- if project.testimonial|length -%}
-                {%- set reference = project.testimonial -%}
-                {%- include './testimonials.njk' -%}
-            {%- endif -%}
+            <div class="project__description">
+                {%- if project.blurb | length -%}
+                    <p class="project__blurb">{{ project.blurb }}</p>
+                {%- endif -%}
+                {%- if project.description | length -%}
+                    <p class="project__description">{{ project.description }}</p>
+                {%- endif -%}
+                {%- if project.testimonial|length -%}
+                    {%- set reference = project.testimonial -%}
+                    {%- include './testimonials.njk' -%}
+                {%- endif -%}
+            </div>
         </div>
     {%- endfor -%}
 </div>

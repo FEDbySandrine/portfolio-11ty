@@ -39,40 +39,43 @@
             grid-template-columns: minmax(300px, 40%) 1fr;
             column-gap: var(--sp-xl);
 
-            .testimonial {
-                grid-column: 2 / span 1;
-                // grid-row: 5 / span 1;
-            }
+            // .testimonial {
+            //     grid-column: 2 / span 1;
+            //     // grid-row: 5 / span 1;
+            // }
         }
         &--feature & {
-            &__title,
-            &__client,
-            &__description {
-                grid-column: 2 / span 1;
-                grid-row-end: span 1;
-            }
+            // &__title,
+            // &__client,
+            // &__description {
+            //     grid-column: 2 / span 1;
+            //     grid-row-end: span 1;
+            // }
             &__tags {
                 grid-row: 1 / span 1;
                 grid-column: 1 / span 2;
             }
-            &__thumbnail {
-                grid-row: 2 / span 4;
-            }
+            // &__thumbnail {
+            //     grid-row: 2 / span 4;
+            // }
+        }
+    }
+    
+    a {
+        color: var(--co-text-primary);
+        display: inline-block;
+        text-decoration: none;
+
+        &:hover,
+        &:focus-visible {
+            text-decoration: underline;
         }
     }
 
     &__title {
         margin-bottom: var(--sp-xs);
 
-        a {
-            color: var(--co-text-primary);
-            text-decoration: none;
-
-            &:hover,
-            &:focus-visible {
-                text-decoration: underline;
-            }
-        }
+        
     }
 
     &__client {
