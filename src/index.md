@@ -35,19 +35,7 @@ preview:  "social-homepage@2x"
   <section class="l-concealer__spill l-section:fill theme theme:primary">
     <h2 class="sr-only">Testimonials</h2>
     <div class="l-slider" tabindex="0">
-      {%- set reference = "pete" -%}
-      {%- include './_includes/modules/testimonials.njk' -%}
-
-      {%- set reference = "simon" -%}
-      {%- include './_includes/modules/testimonials.njk' -%}
-
-      {%- set reference = "dipan" -%}
-      {%- include './_includes/modules/testimonials.njk' -%}
-
-      {%- set reference = "ludo" -%}
-      {%- include './_includes/modules/testimonials.njk' -%}
-
-      {%- set reference = "david" -%}
+      {%- set reference = ["pete", "simon", "dipan", "ludo", "david"] -%}
       {%- include './_includes/modules/testimonials.njk' -%}
     </div>
   </section>
@@ -71,7 +59,7 @@ preview:  "social-homepage@2x"
         <p>I have been exposed to several environments, systems and libraries in various languages.</p>
         <p>Understanding of MVC and MVVM concepts allows me to get onboard quickly and work on UI components regardless of the framework used.</p>
       </div>
-      {%- set reference = "jordan" -%}
+      {%- set reference = ["jordan"] -%}
       {%- include './_includes/modules/testimonials.njk' -%}
     </div>
   </div>

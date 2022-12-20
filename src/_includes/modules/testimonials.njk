@@ -1,8 +1,10 @@
-{%- for source, testimonial in testimonials -%}
-{%- if source == reference -%}
-  <blockquote class="testimonial">
-    {{ testimonial.quote | safe }}
-    <cite>{{ testimonial.author }}, {{ testimonial.role }}</cite>
-  </blockquote>
-{%- endif -%}
+{%- for ref in reference -%}
+  {%- for source, testimonial in testimonials -%}
+  {%- if source == ref -%}
+    <blockquote class="testimonial">
+      {{ testimonial.quote | safe }}
+      <cite>{{ testimonial.author }}, {{ testimonial.role }}</cite>
+    </blockquote>
+  {%- endif -%}
+  {%- endfor -%}
 {%- endfor -%}

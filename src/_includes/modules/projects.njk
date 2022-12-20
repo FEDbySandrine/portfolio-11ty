@@ -34,7 +34,7 @@
                     <p class="project__description">{{ project.description }}</p>
                 {%- endif -%}
                 {%- if project.testimonial|length -%}
-                    {%- set reference = project.testimonial -%}
+                    {%- set reference = [project.testimonial] -%}
                     {%- include './testimonials.njk' -%}
                 {%- endif -%}
             </div>
