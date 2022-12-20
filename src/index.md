@@ -22,6 +22,7 @@ preview:  "social-homepage@2x"
 <section class="l-section">
   <div class="wrapper">
     {%- include './_includes/modules/services.njk' -%}
+  </div>
 </section>
 
 <section class="l-section">
@@ -46,8 +47,6 @@ preview:  "social-homepage@2x"
         {%- include './_includes/modules/projects.njk' -%}
     </div>
   </section>
-  
-
 </div>
 
 <section class="l-section">
