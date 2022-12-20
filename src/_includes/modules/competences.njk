@@ -2,7 +2,7 @@
 {%- for source, service in competences -%}
     {%- if source == reference -%}
     <h2 class="overline">{{ source }}</h2>
-    {%- if service.blurb -%}<p>{{ service.blurb }}</p>{%- endif -%}
+    {%- if service.blurb -%}{{ service.blurb | safe }}{%- endif -%}
     <ul class="list-cols">
     {%- for item in service.list -%}
         <li>{{ item }}</li>

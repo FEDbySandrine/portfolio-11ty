@@ -56,8 +56,7 @@ preview:  "social-homepage@2x"
     {%- include './_includes/modules/competences.njk' -%}
     <div class="l-cols--var">
       <div>
-        <p>I have been exposed to several environments, systems and libraries in various languages.</p>
-        <p>Understanding of MVC and MVVM concepts allows me to get onboard quickly and work on UI components regardless of the framework used.</p>
+        {{ competences.interests.content | safe }}
       </div>
       {%- set reference = ["jordan"] -%}
       {%- include './_includes/modules/testimonials.njk' -%}

@@ -3,8 +3,8 @@
 <dl class="dlist-cols:3">
 {%- for service in competences.services -%}
     <div>
-        <dt>{{ service.title }}</dt>
-        <dd>{{ service.description }}</dd>
+        <dt>{{ service.title | safe }}</dt>
+        <dd>{{ service.description | safe }}</dd>
     </div>
 {%- endfor -%}
 </dl>
