@@ -73,6 +73,10 @@ body {
   }
 }
 
+a, ins {
+  text-underline-offset: 2px;
+}
+
 button {
   cursor: pointer;
 }
@@ -143,4 +147,21 @@ th {
 
 tr {
   vertical-align: top;
+}
+
+cite {
+  display: flex;
+  align-items: center;
+  margin-left: -40px;
+
+
+  &:before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 0.0625rem;
+  background: var(--co-accent-primary);
+  margin-right: 20px;
+  opacity: 0.5;
+  }
 }

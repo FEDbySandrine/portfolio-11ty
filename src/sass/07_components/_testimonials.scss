@@ -9,21 +9,6 @@
 	}
 
   cite {
-  	display: flex;
-  	align-items: center;
-  	margin-left: -40px;
-
-
-  	&:before {
-		content: "";
-		display: inline-block;
-		width: 20px;
-		height: 0.0625rem;
-		background: var(--co-accent-primary);
-		margin-right: 20px;
-		opacity: 0.5;
-  	}
-
 	.l-slider & {
 		margin-left: 0;
 
