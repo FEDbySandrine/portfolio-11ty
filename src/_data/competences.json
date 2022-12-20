@@ -1,0 +1,64 @@
+{
+    "services": [
+        {
+            "title": "Consultancy",
+            "description": "Auditing accessibility, UX or code quality at any stage of production."
+        },
+        {
+            "title": "Development",
+            "description": "Transforming designs into usable interfaces with best practices and standards."
+        },
+        {
+            "title": "UX Research",
+            "description": "Usability and accessibility engineering for inclusive components."
+        }
+    ],
+    "skills": {
+        "list": [
+            "HTML markup proficiency",
+            "ARIA demystification",
+            "Advanced CSS mastery",
+            "Bulletproof responsive design",
+            "WCAG literacy",
+            "Screen readers grasp",
+            "Design systems & pattern libs",
+            "Top-notch consistency focus",
+            "Usability wisdom",
+            "DOM object manipulation JS",
+            "Debugging dexterity",
+            "Version control abilities"
+        ]
+    },
+    "tools": {
+        "blurb": "A non-exhaustive list of tools and systems I recently worked with:",
+        "list": [
+            "Sass",
+            "NPM",
+            "Git",
+            "Github",
+            "Storybook",
+            "Figma",
+            "Miro",
+            "jQuery",
+            "Eleventy",
+            "Shopify",
+            "Webflow",
+            "Wordpress",
+            "Developer Tools"
+        ]
+    },
+    "interests": {
+        "blurb": "Currently, I'm particularly focusing on the following topics:",
+        "list": [
+            "Usability",
+            "Design systems",
+            "Web vitals",
+            "Web components",
+            "Green web",
+            "Scalable Modern CSS",
+            "Dev flow automation",
+            "Indie web",
+            "React & JS frameworks"
+        ]
+    }
+}

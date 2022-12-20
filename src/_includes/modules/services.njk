@@ -1,0 +1,10 @@
+
+<h2 class="overline">Services</h2>
+<dl class="dlist-cols:3">
+{%- for service in competences.services -%}
+    <div>
+        <dt>{{ service.title }}</dt>
+        <dd>{{ service.description }}</dd>
+    </div>
+{%- endfor -%}
+</dl>
