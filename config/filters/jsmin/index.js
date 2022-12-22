@@ -1,3 +1,4 @@
+const { minify } = require("terser");
 const jsmin = async (code, callback) => {
     try {
         const minified = await minify(code);

@@ -1,19 +1,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
 
-<title>{{ title }} | {{ settings.name }}</title>
+<title>{% if title %}{{ title }}{{ title }} | {{ meta.siteName }}{% endif %}</title>
 
-<meta name="description" content="Hi, I'm Sandrine. Interface expert, accessibility specialist and user advocate with over 20 years of experience. I help companies integrating designs, developing pattern libraries, auditing accessibility and upskilling teams.">
+{# synchronous js / schema #}
+{% include '../schemas/base-schema.njk' %}
 
-<meta property="og:title" content="Building resilient user experiences through meaningful front-end development">
-<meta property="og:description" content="Interface expert, accessibility specialist and user advocate with over 20 years of experience. I help companies integrating designs, developing pattern libraries, auditing accessibility and upskilling teams.">
-<meta property="og:site_name" content="FED by Sandrine">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="en_NZ">
-<meta property="og:image" content="assets/images/{{ preview }}.webp">
+{# everything else: meta tags, icons, open graph etc. #}
+{% include '../partials/meta-info.njk' %}
 
-<link rel="icon" href="{{ '/assets/images/favicon.svg' | url }}" type="image/svg+xml">
-
-{# <link rel="preload" href="{{ '/assets/fonts/ibm-plex-sans/ibm-plex-sans-medium.woff2' | url }}" as="font" type="font/woff2" crossorigin="anonymous">
-<link rel="preload" href="{{ '/assets/fonts/ibm-plex-serif/ibm-plex-serif-medium.woff2' | url }}" as="font" type="font/woff2" crossorigin="anonymous"> #}
 <link rel="stylesheet" href="{{ '/css/style.css' | url }}">

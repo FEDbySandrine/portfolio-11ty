@@ -1,8 +1,8 @@
 <footer class="l-concealer__spill l-banner theme theme:primary">
   <div class="wrapper l-cols">
     <p>This website is built with <a href="https://www.11ty.dev/" target="_blank">11ty</a>.<br>
-      Source available on <a href="https://github.com/FEDbySandrine/portfolio-11ty" target="_blank">Github</a>.<br>
-      Snippets available on <a href="https://www.instagram.com/{{ settings.username }}/" target="_blank">Instagram</a> and <a href="https://codepen.io/collection/Exwogo" target="_blank">Codepen</a>.
+      Source available on <a href="{{ meta.meta_data.githubProfile }}/portfolio-11ty" target="_blank">Github</a>.<br>
+      Snippets available on <a href="{{ meta.meta_data.instagramProfile }}" target="_blank">Instagram</a> and <a href="https://codepen.io/collection/Exwogo" target="_blank">Codepen</a>.
     </p>
     {%- include '../modules/id-card.njk' -%}
   </div>

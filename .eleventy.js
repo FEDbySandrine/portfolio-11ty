@@ -6,7 +6,6 @@ const {img, imgResponsive, svgIcon, svgImage} = require('./config/shortcodes/ind
 
 // plugins
 const svgSprite = require("eleventy-plugin-svg-sprite");
-const { minify } = require("terser");
 
 module.exports = function (eleventyConfig) {
   // 	-- Custom Watch Targets -----------------------------------

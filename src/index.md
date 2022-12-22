@@ -1,7 +1,7 @@
 ---
 title:    "Home"
 layout:   "base.njk"
-preview:  "social-homepage@2x"
+featured_image:  "social-homepage@2x"
 ---
 
 <section class="l-section l-concealer">

@@ -1,0 +1,24 @@
+{
+    "url": "https://fedbysandrine.com",
+    "siteName": "FED by Sandrine",
+    "siteDescription": "\"Building resilient user experiences through meaningful front-end development.\" I'm an interface expert, accessibility specialist and user advocate helping companies to integrate designs, develop pattern libraries, audit accessibility and upskill teams.",
+    "siteType": "Person",
+    "locale": "en_EN",
+    "lang": "en",
+    "dir": "ltr",
+    "author": "Sandrine PNS", 
+    "authorEmail": "fedbysandrine@gmail.com", 
+    "authorWebsite": "https://fedbysandrine.com", 
+    "meta_data": {
+        "opengraph_default": "/assets/images/social-homepage@2x.webp",
+        "linkedInProfile": "https://linkedin.com/in/sandrinepns",
+        "mastodonProfile": "https://mastodon.social/@fedbysandrine",
+        "twitterProfile": "https://www.twitter.com/fedbysandrine",
+        "githubProfile": "https://www.github.com/fedbysandrine",
+        "codepenProfile": "https://www.codepen.io/fedbysandrine",
+        "mediumProfile": "https://medium.com/@fedbysandrine",
+        "instagramProfile": "https://www.instagram.com/fedbysandrine",
+        "facebookProfile": "https://www.facebook.com/fedbysandrine",
+        "pinterestProfile": "https://www.pinterest.com/fedbysandrine"
+    }
+}
