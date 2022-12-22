@@ -1,0 +1,47 @@
+[
+	{
+		"active": true,
+		"platform": "LinkedIn",
+		"url": "https://linkedin.com/in/sandrinepns"
+	},
+	{
+		"active": true,
+		"platform": "Mastodon",
+		"url": "https://mastodon.social/@fedbysandrine"
+	},
+	{
+		"active": false,
+		"platform": "Twitter",
+		"url": "https://www.twitter.com/fedbysandrine"
+	},
+	{
+		"active": false,
+		"platform": "Github",
+		"url": "https://www.github.com/fedbysandrine"
+	},
+	{
+		"active": true,
+		"platform": "Codepen",
+		"url": "https://www.codepen.io/fedbysandrine"
+	},
+	{
+		"active": false,
+		"platform": "Medium",
+		"url": "https://medium.com/@fedbysandrine"
+	},
+	{
+		"active": true,
+		"platform": "Instagram",
+		"url": "https://www.instagram.com/fedbysandrine"
+	},
+	{
+		"active": false,
+		"platform": "Facebook",
+		"url": "https://www.facebook.com/fedbysandrine"
+	},
+	{
+		"active": false,
+		"platform": "Pinterest",
+		"url": "https://www.pinterest.com/fedbysandrine"
+	}
+]
