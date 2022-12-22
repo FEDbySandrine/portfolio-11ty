@@ -1,34 +1,34 @@
 ---
 title:    "Home"
-layout:   "base.njk"
+layout:   "base"
 featured_image:  "social-homepage@2x"
 ---
 
 <section class="l-section l-concealer">
   <div class="l-concealer__cover l-section:fill v-align">
     <div class="wrapper">
-      {%- include './_includes/modules/content-intro.njk' -%}
+      {%- include 'components/content-intro.njk' -%}
     </div>
   </div>
   <div class="l-concealer__spill l-banner theme theme:secondary">
     <div class="wrapper">
       {%- set opentowork = true -%}
       {%- set icoSize = 'xl' -%}
-      {%- include './_includes/modules/id-card.njk' -%}
+      {%- include 'components/id-card.njk' -%}
     </div>
     </div>
 </section>
 
 <section class="l-section">
   <div class="wrapper">
-    {%- include './_includes/modules/services.njk' -%}
+    {%- include 'components/services.njk' -%}
   </div>
 </section>
 
 <section class="l-section">
   <div class="wrapper">
     {%- set reference = "skills" -%}
-    {%- include './_includes/modules/competences.njk' -%}
+    {%- include 'components/competences.njk' -%}
   </div>
 </section>
 
@@ -37,14 +37,14 @@ featured_image:  "social-homepage@2x"
     <h2 class="sr-only">Testimonials</h2>
     <div class="l-slider" tabindex="0">
       {%- set reference = ["pete", "simon", "dipan", "ludo", "david"] -%}
-      {%- include './_includes/modules/testimonials.njk' -%}
+      {%- include 'components/testimonials.njk' -%}
     </div>
   </section>
 
   <section class="l-section l-concealer__cover">
     <div class="wrapper">
       <h2 class="overline">Projects</h2>
-        {%- include './_includes/modules/projects.njk' -%}
+        {%- include 'components/projects.njk' -%}
     </div>
   </section>
 </div>
@@ -52,13 +52,13 @@ featured_image:  "social-homepage@2x"
 <section class="l-section">
   <div class="wrapper">
     {%- set reference = "tools" -%}
-    {%- include './_includes/modules/competences.njk' -%}
+    {%- include 'components/competences.njk' -%}
     <div class="l-cols--var">
       <div>
         {{ competences.interests.content | safe }}
       </div>
       {%- set reference = ["jordan"] -%}
-      {%- include './_includes/modules/testimonials.njk' -%}
+      {%- include 'components/testimonials.njk' -%}
     </div>
   </div>
 </section>
@@ -66,6 +66,6 @@ featured_image:  "social-homepage@2x"
 <section class="l-section">
   <div class="wrapper">
     {%- set reference = "interests" -%}
-    {%- include './_includes/modules/competences.njk' -%}
+    {%- include 'components/competences.njk' -%}
   </div>
 </section>

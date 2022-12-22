@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ meta.lang }}" dir="{{ meta.dir }}" class="no-js">
   <head>
-    {% include "site/head.njk" %}
+    {% include "partials/head.njk" %}
   </head>
   <body class="l-concealer">
     <div class="warning">
@@ -14,7 +14,7 @@
     <a href="#main" class="btn-skip">Skip to content</a>
     <div aria-hidden="true">{% svgsprite %}</div>
 
-    {% include "site/header.njk" %}
+    {% include "partials/header.njk" %}
 
     {% block general %}
       {% block main %}
@@ -27,7 +27,7 @@
       {% endblock %}
     {% endblock %}
 
-    {% include "site/footer.njk" %}
+    {% include "partials/footer.njk" %}
 
     {# <script src="{{ '/js/scripts.js' | url }}"></script> #}
   </body>

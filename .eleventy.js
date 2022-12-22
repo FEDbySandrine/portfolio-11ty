@@ -8,21 +8,24 @@ const {img, imgResponsive, svgIcon, svgImage} = require('./config/shortcodes/ind
 const svgSprite = require("eleventy-plugin-svg-sprite");
 
 module.exports = function (eleventyConfig) {
+  // -- Layout aliases ------------------------------------------
+  eleventyConfig.addLayoutAlias('base', 'base.njk');
+
   // 	-- Custom Watch Targets -----------------------------------
   eleventyConfig.addWatchTarget("./src/sass");
   eleventyConfig.addWatchTarget("./src/js");
   eleventyConfig.addWatchTarget("./src/assets");
 
-  // 	-- Pass-through copy for static assets ---------------------
+  // 	-- Pass-through copy for static assets --------------------
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
   eleventyConfig.addPassthroughCopy("./src/assets/images");
   eleventyConfig.addPassthroughCopy("./src/assets/docs");
   // eleventyConfig.addPassthroughCopy("./src/js/vendors");
 
-  // 	-- Custom filters ------------------------------------------
+  // 	-- Custom filters -----------------------------------------
   eleventyConfig.addNunjucksAsyncFilter("jsmin", jsmin);
 
-  // 	-- Custom shortcodes ---------------------------------------
+  // 	-- Custom shortcodes --------------------------------------
   eleventyConfig.addShortcode("img", img); 
   eleventyConfig.addShortcode("imgResponsive", imgResponsive);
   eleventyConfig.addShortcode("svgIcon", svgIcon);
@@ -34,11 +37,13 @@ module.exports = function (eleventyConfig) {
     // (MUST be defined when initialising plugin)
   });
 
-  // 	-- General config ------------------------------------------
+  // 	-- General config -----------------------------------------
   return {
     dir: {
       input: "src",
       output: "public",
+      includes: '_includes',
+      layouts: '_layouts'
     },
     markdownTemplateEngine: "njk",
   };
