@@ -1,6 +1,6 @@
 # Portfolio static website
 
-## NPM Dev Dependencies
+## Pre-requisite
 * Latest Node (v18.6.0)
 * Latest NPM (v8.13.2)
 * Static site generator [Eleventy](https://www.11ty.dev/)
