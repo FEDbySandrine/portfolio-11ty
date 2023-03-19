@@ -6,7 +6,6 @@ const {img, imgResponsive, svgIcon, svgImage} = require('./config/shortcodes/ind
 
 // plugins
 const svgSprite = require("eleventy-plugin-svg-sprite");
-const CleanCSS = require("clean-css");
 
 module.exports = function (eleventyConfig) {
   // -- Layout aliases ------------------------------------------
