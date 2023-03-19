@@ -9,11 +9,11 @@
 {# everything else: meta tags, icons, open graph etc. #}
 {% include 'partials/meta-info.njk' %}
 
-<!-- capture the CSS content as a Nunjucks variable -->
+{# capture the CSS content as a Nunjucks variable #}
 {% set css %}
   {% include "css/critical.css" %}
 {% endset %}
-<!-- feed it through our cssmin filter to minify -->
+{# feed it through our cssmin filter to minify #}
 <style>
   {{ css | cssmin | safe }}
 </style>
