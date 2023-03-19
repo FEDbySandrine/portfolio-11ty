@@ -15,43 +15,43 @@
                 "file": "auckland-transport",
                 "ext": "png",
                 "alt": "Auckland Transport",
-                "width": "",
-                "height": ""
+                "width": "120",
+                "height": "60"
             },
             {
                 "file": "auckland-council",
                 "ext": "png",
                 "alt": "Auckland Council",
-                "width": "",
-                "height": ""
+                "width": "120",
+                "height": "54"
             },
             {
                 "file": "ministry-of-health",
                 "ext": "png",
                 "alt": "Ministry of Health",
-                "width": "",
-                "height": ""
+                "width": "120",
+                "height": "56"
             },
             {
                 "file": "napier-council",
                 "ext": "png",
                 "alt": "Napier City Council",
-                "width": "",
-                "height": ""
+                "width": "120",
+                "height": "43"
             },
             {
                 "file": "asb",
                 "ext": "png",
                 "alt": "ASB",
-                "width": "",
-                "height": ""
+                "width": "120",
+                "height": "38"
             },
             {
                 "file": "new-world",
                 "ext": "png",
                 "alt": "New World",
-                "width": "",
-                "height": ""
+                "width": "120",
+                "height": "26"
             }
         ]
     },

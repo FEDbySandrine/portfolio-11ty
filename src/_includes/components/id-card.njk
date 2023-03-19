@@ -1,5 +1,8 @@
 <div class="id-card">
-  <div class="id-card__media ico-avatar ico:{%- if icoSize -%}{{ icoSize }}{%- else -%}md{%- endif -%}"><img src="/assets/images/avatar@2x.webp" aria-hidden="true" alt="" width="80" height="80"></div>
+  <div class="id-card__media ico-avatar ico:{%- if icoSize -%}{{ icoSize }}{%- else -%}md{%- endif -%}">
+	{%- set imgSize = ('120' if icoSize === 'xl' else '80') -%}
+	{%- img 'avatar', '', imgSize, imgSize, true, 'png' -%}
+  </div>
   <div class="id-card__content">
 		{%- if opentowork -%}
 		<p>I'm always open to opportunities where my area of competence is applicable meaningfully.</p>
