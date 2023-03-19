@@ -1,5 +1,7 @@
 const jsmin = require('./jsmin');
+const cssmin = require('./cssmin');
 
 module.exports = {
-    jsmin
+    jsmin,
+    cssmin
 };

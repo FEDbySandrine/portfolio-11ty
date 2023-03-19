@@ -14,36 +14,17 @@
   "03_tools/functions",
   "03_tools/mixins";
 
-// 04. Generics
-@import
-  "04_generics/font-face",
-  "04_generics/foundation",
-  "04_generics/themes",
-  "04_generics/typography";
-//
 // 05. Elements
 @import
   "05_elements/buttons",
-//   "05_elements/forms",
-//   "05_elements/links",
   "05_elements/icons",
   "05_elements/logo";
-//
+
 // 06. Skeleton
 @import
-  // "06_skeleton/footer",
-  "06_skeleton/header",
-  "06_skeleton/layouts",
   "06_skeleton/lists";
-//
+
 // 07. Components
 @import
-  "07_components/id-card",
   "07_components/projects",
   "07_components/testimonials";
-//
-// 08. Utilities
-@import
-//   "08_utilities/animations",
-  "08_utilities/helpers",
-  "08_utilities/user-preferences";
