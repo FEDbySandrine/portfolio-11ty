@@ -1,0 +1,14 @@
+---
+layout: "base"
+---
+
+{% set pageHeaderTitle = title %}
+{% set postListItems = pagination.items %}
+
+{% block content %}
+<div class="wrapper">
+    <h1>{{ pageHeaderTitle }}</h1>
+    {{ content | safe }}
+    {% include "partials/post-list.njk" %}
+</div>
+{% endblock %}

@@ -10,18 +10,25 @@ const svgSprite = require("eleventy-plugin-svg-sprite");
 module.exports = function (eleventyConfig) {
   // -- Layout aliases ------------------------------------------
   eleventyConfig.addLayoutAlias('base', 'base.njk');
+  eleventyConfig.addLayoutAlias('feed', 'feed.njk');
 
   // 	-- Custom Watch Targets -----------------------------------
   eleventyConfig.addWatchTarget("./src/sass");
   // eleventyConfig.addWatchTarget("./src/js");
   eleventyConfig.addWatchTarget("./src/assets");
+  eleventyConfig.addWatchTarget("./src/posts");
 
   // 	-- Pass-through copy for static assets --------------------
-  eleventyConfig.addPassthroughCopy("./src/assets/docs");
   eleventyConfig.addPassthroughCopy("./src/assets/fonts");
   eleventyConfig.addPassthroughCopy("./src/assets/images");
   eleventyConfig.addPassthroughCopy({"./src/_includes/css/style.css": "css/style.css"});
   // eleventyConfig.addPassthroughCopy("./src/js/vendors");
+
+  // 	-- Custom collections -------------------------------------
+  eleventyConfig.addCollection('blog', collection => {
+    // Returns a collection of blog posts in reverse date order
+    return collection.getFilteredByGlob('./src/posts/*.md').reverse();
+  });
 
   // 	-- Custom filters -----------------------------------------
   eleventyConfig.addNunjucksAsyncFilter("jsmin", jsmin);

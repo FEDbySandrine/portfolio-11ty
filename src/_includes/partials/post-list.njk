@@ -1,0 +1,8 @@
+
+<ol>
+    {% for item in postListItems %}
+    <li>
+        <a href="{{ item.url }}">{{ item.data.title }}</a>
+    </li>
+    {% endfor %}
+</ol>
